@@ -1,0 +1,17 @@
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+  }
+
+#a{
+    display: block;;
+    border-width: 2;
+    border-style: solid;
+    border-radius:0 0 30px 30px;
+    border-color: black;
+}
+.img{
+    border-radius:50%;
+    border-image:url(박.jpg) 30 round;
+}

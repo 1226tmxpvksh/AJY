@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{19E3DB8C-6127-4166-BBAD-E50EEB713EE7}</ProjectGuid>
+    <ProjectGuid>{71E3C100-8A21-419F-B319-B2B20737BEDA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Project10</RootNamespace>
+    <RootNamespace>영화관예매</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -143,7 +143,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="예매.c" />
+    <ClCompile Include="cancel.c" />
+    <ClCompile Include="idpw.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="reservation.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cancel.h" />
+    <ClInclude Include="idpw.h" />
+    <ClInclude Include="reservation.h" />
+    <ClInclude Include="seat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

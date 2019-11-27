@@ -40,10 +40,17 @@ void idpw()
 void memberjoin()
 {
 	printf("아이디를 입력하시오: ");
-	scanf_s("%d", &m[0].id);
+	scanf_s("%d", m[0].id);
+	printf("비밀번호를  입력하시오: ");
+	scanf_s("%d", m[0].pw);
+	printf("이름을 입력하시오: ");
+	scanf_s("%d", m[0].name);
+	printf("나이를 입력하시오: ");
+	scanf_s("%d", m[0].age);
 }
 
 void login()
 {
-
+	printf("아이디를 입력하시오: ");
+	printf("비밀번호를 입력하시오: ");
 }

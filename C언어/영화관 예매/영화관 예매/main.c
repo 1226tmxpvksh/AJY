@@ -8,10 +8,11 @@ int seat1, seat2;
 
 int main()
 {
-	idpw();
 
 	while (1)
 	{
+		idpw();
+
 		int menu;
 
 		printf("1.예약\n2.취소\n3.종료\n메뉴를선택하시오:");

@@ -2,7 +2,7 @@
 #define IDPW
 
 void idpw();
-void memberjoin();
+int memberjoin();
 void login();
 
 typedef struct member
@@ -12,5 +12,9 @@ typedef struct member
 	char name[10];
 	int age[10];
 }member;
+
+member user[10];
+
+int order;
 
 #endif IDPW

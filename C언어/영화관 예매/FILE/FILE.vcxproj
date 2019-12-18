@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{71E3C100-8A21-419F-B319-B2B20737BEDA}</ProjectGuid>
+    <ProjectGuid>{AD0D414C-90FA-4CB9-9975-10FE451FF70F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>영화관예매</RootNamespace>
+    <RootNamespace>FILE</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -86,7 +86,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>false</SDLCheck>
+      <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
@@ -143,20 +143,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cancel.c" />
-    <ClCompile Include="file.c" />
-    <ClCompile Include="idpw.c" />
-    <ClCompile Include="login.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="reservation.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="cancel.h" />
-    <ClInclude Include="file.h" />
-    <ClInclude Include="idpw.h" />
-    <ClInclude Include="login.h" />
-    <ClInclude Include="reservation.h" />
-    <ClInclude Include="seat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

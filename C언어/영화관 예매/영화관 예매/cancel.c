@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "cancel.h"
+#include "idpw.h"
 
 extern int seat[10][10];
 extern int seat1, seat2;
 
-void cancel()
+void cancel()      //좌석 예약취소
 {
 	while (1)
 	{
@@ -13,7 +14,7 @@ void cancel()
 		{
 			for (int j = 0; j < 10; j++)
 			{
-				printf("%d ", seat[i][j]);
+				printf("%d ", user[user_num].seat[i][j]);
 			}
 			printf("\n");
 		}
@@ -28,10 +29,11 @@ void cancel()
 			break;
 		}
 
-		if (seat[seat2 - 1][seat1 - 1] != 0)
+		if (user[user_num].seat[seat2 - 1][seat1 - 1] != 0)
 		{
-			seat[seat2 - 1][seat1 - 1] = 0;
+			user[user_num].seat[seat2 - 1][seat1 - 1] = 0;
 			printf("예약 취소 되었습니다.\n");
+			seat_file();
 			break;
 
 		}

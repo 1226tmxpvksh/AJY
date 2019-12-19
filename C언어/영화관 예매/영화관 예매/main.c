@@ -7,5 +7,7 @@
 
 int main()
 {
+	set_ifo();
+
 	idpw();
 }

@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include "reservation.h"
+#include<stdio.h>
+#include "idpw.h"
 
 extern int seat[10][10];
 extern int seat1, seat2;
 
-void reservation()
+void reservation()      //예약
 {
 	while (1)
 	{
@@ -13,7 +13,7 @@ void reservation()
 		{
 			for (int j = 0; j < 10; j++)
 			{
-				printf("%d ", seat[i][j]);
+				printf("%d ", user[user_num].seat[i][j]);
 			}
 			printf("\n");
 		}
@@ -28,15 +28,31 @@ void reservation()
 			break;
 		}
 
-		if (seat[seat2 - 1][seat1 - 1] == 0)
+		if (user[user_num].seat[seat2 - 1][seat1 - 1] == 0)
 		{
-			seat[seat2 - 1][seat1 - 1] = 1;
+			user[user_num].seat[seat2 - 1][seat1 - 1] = 1;
 			printf("예약되었습니다\n");
+			seat_file();
 			break;
 		}
-		else if ((seat[seat2 - 1][seat1 - 1]) == 1)
+		else if ((user[user_num].seat[seat2 - 1][seat1 - 1]) == 1)
 		{
 			printf("예약된 자리 입니다.\n");
 		}
 	}
+}
+
+void seats()
+{
+	printf("-------------------------------------\n");
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			printf("%d ", user[user_num].seat[i][j]);
+		}
+		printf("\n");
+	}
+	printf("-------------------------------------\n");
+	printf("\n");
 }

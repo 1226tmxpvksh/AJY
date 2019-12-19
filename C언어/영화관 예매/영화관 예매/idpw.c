@@ -27,6 +27,10 @@ void idpw()
 		{
 			exit();
 		}
+		else
+		{
+			printf("1부터3까지 입력하세오");
+		}
 
 	}
 }
@@ -34,23 +38,22 @@ void idpw()
 int memberjoin()
 {
 	int menu;
-	static int i = 0;
-	int condition=1;
+	int condition = 1;
 	while (condition)
 	{
 		condition = 0;
 		printf("회원가입\n");
 		printf("ID:");
-		scanf("%s", &user[i].id);
+		scanf("%s", &user[order].id);
 		printf("PW:");
-		scanf("%s", &user[i].pw);
+		scanf("%s", &user[order].pw);
 		printf("이름:");
-		scanf("%s", &user[i].name);
+		scanf("%s", &user[order].name);
 		printf("나이:");
-		scanf("%s", &user[i].age);
-		for (int j = 0; j < i; j++)
+		scanf("%s", &user[order].age);
+		for (int j = 0; j < order; j++)
 		{
-			if (strcmp(user[i].id, user[j].id) == 0)
+			if (strcmp(user[order].id, user[j].id) == 0)
 			{
 				printf("아이디가 중복되었습니다\n");
 				condition = 1;
@@ -58,8 +61,6 @@ int memberjoin()
 			}
 		}
 	}
-	order = i;
 	file();
-	i++;
 	idpw();
 }

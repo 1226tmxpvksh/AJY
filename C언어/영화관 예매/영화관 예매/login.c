@@ -4,7 +4,7 @@
 #include "reservation.h"
 #include "cancel.h"
 
-void login()
+void login()      //로그인 부분
 {
 	char id[10];
 	char pw[10];
@@ -22,6 +22,7 @@ void login()
 			if (strcmp(user[j].id, id) == 0 && strcmp(user[j].pw, pw) == 0)
 			{
 				condition = 1;
+				user_num = j; //예약한 사람이 누구인지 판단
 			}
 			else if (strcmp(user[j].id, id) != 0)
 			{
@@ -51,8 +52,9 @@ void select()
 
 		int menu;
 
-		printf("1.예약\n2.취소\n3.종료\n메뉴를선택하시오: ");
+		printf("1.예약\n2.좌석보기\n3.취소\n4.종료\n메뉴를선택하시오: ");
 		scanf_s("%d", &menu);
+		printf("\n");
 
 		if (menu == 1)
 		{
@@ -61,21 +63,25 @@ void select()
 		}
 		else if (menu == 2)
 		{
+			seats();
+			continue;
+		}
+		else if (menu == 3)
+		{
 			cancel();
 			continue;
 		}
 
-		else if (menu == 3)
+		else if (menu == 4)
 		{
-			exit();
+			idpw();
 		}
 		else
 		{
-			printf("1번부터 3번을 입력하십시오\n");
+			printf("1번부터 4번을 입력하십시오\n");
 			continue;
 
 		}
 		break;
-
 	}
 }
